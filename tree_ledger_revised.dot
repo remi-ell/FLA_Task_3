@@ -1,0 +1,24 @@
+digraph T {
+  node [fontname="Helvetica" fontsize=12 shape=plaintext];
+  edge [arrowhead=none];
+  labelloc="t"; label="G3′ (only tree)"; fontname="Helvetica"; fontsize=13;
+  n0 [label="S"];
+  n1 [label="a" fontcolor="#1a5fb4"];
+  n0 -> n1;
+  n2 [label="B"];
+  n3 [label="b" fontcolor="#1a5fb4"];
+  n2 -> n3;
+  n0 -> n2;
+  n4 [label="S"];
+  n5 [label="a" fontcolor="#1a5fb4"];
+  n4 -> n5;
+  n6 [label="B"];
+  n7 [label="b" fontcolor="#1a5fb4"];
+  n6 -> n7;
+  n4 -> n6;
+  n8 [label="S"];
+  n9 [label="ε" fontcolor="#1a5fb4"];
+  n8 -> n9;
+  n4 -> n8;
+  n0 -> n4;
+}

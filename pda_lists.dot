@@ -1,0 +1,20 @@
+digraph "M1: DPDA for list literals" {
+  rankdir=LR; bgcolor=white;
+  node [shape=circle fontname="Helvetica" fontsize=12];
+  edge [fontname="Helvetica" fontsize=10];
+  start [shape=point width=0.08];
+  "q0" [shape=circle];
+  "q1" [shape=circle];
+  "q2" [shape=circle];
+  "q3" [shape=circle];
+  "qf" [shape=doublecircle];
+  start -> "q0";
+  "q0" -> "q1" [label="[, Z / [Z\l"];
+  "q1" -> "q1" [label="[, [ / [[\l"];
+  "q1" -> "q2" [label="x, [ / [\l], [ / ε\l"];
+  "q2" -> "q3" [label=",, [ / [\l"];
+  "q2" -> "q2" [label="], [ / ε\l"];
+  "q3" -> "q1" [label="[, [ / [[\l"];
+  "q3" -> "q2" [label="x, [ / [\l"];
+  "q2" -> "qf" [label="ε, Z / Z\l"];
+}

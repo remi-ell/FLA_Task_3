@@ -1,0 +1,20 @@
+digraph "DPDA for a^n c b^n ∪ a^n d b^2n" {
+  rankdir=LR; bgcolor=white;
+  node [shape=circle fontname="Helvetica" fontsize=12];
+  edge [fontname="Helvetica" fontsize=10];
+  start [shape=point width=0.08];
+  "p" [shape=circle];
+  "one" [shape=circle];
+  "two" [shape=circle];
+  "half" [shape=circle];
+  "f" [shape=doublecircle];
+  start -> "p";
+  "p" -> "p" [label="a, Y / XY\l"];
+  "p" -> "one" [label="c, Y / Y\l"];
+  "p" -> "two" [label="d, Y / Y\l"];
+  "one" -> "one" [label="b, X / ε\l"];
+  "two" -> "half" [label="b, X / X\l"];
+  "half" -> "two" [label="b, X / ε\l"];
+  "one" -> "f" [label="ε, Z / Z\l"];
+  "two" -> "f" [label="ε, Z / Z\l"];
+}

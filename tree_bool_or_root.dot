@@ -1,0 +1,24 @@
+digraph T {
+  node [fontname="Helvetica" fontsize=12 shape=plaintext];
+  edge [arrowhead=none];
+  labelloc="t"; label="'or' at the root"; fontname="Helvetica"; fontsize=13;
+  n0 [label="B"];
+  n1 [label="B"];
+  n2 [label="p" fontcolor="#1a5fb4"];
+  n1 -> n2;
+  n0 -> n1;
+  n3 [label="or" fontcolor="#1a5fb4"];
+  n0 -> n3;
+  n4 [label="B"];
+  n5 [label="B"];
+  n6 [label="p" fontcolor="#1a5fb4"];
+  n5 -> n6;
+  n4 -> n5;
+  n7 [label="and" fontcolor="#1a5fb4"];
+  n4 -> n7;
+  n8 [label="B"];
+  n9 [label="p" fontcolor="#1a5fb4"];
+  n8 -> n9;
+  n4 -> n8;
+  n0 -> n4;
+}

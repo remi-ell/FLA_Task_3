@@ -1,0 +1,22 @@
+digraph "NPDA for a^n b^n ∪ a^n b^2n" {
+  rankdir=LR; bgcolor=white;
+  node [shape=circle fontname="Helvetica" fontsize=12];
+  edge [fontname="Helvetica" fontsize=10];
+  start [shape=point width=0.08];
+  "s" [shape=circle];
+  "p1" [shape=circle];
+  "p2" [shape=circle];
+  "r" [shape=circle];
+  "f" [shape=doublecircle];
+  start -> "s";
+  "s" -> "p1" [label="ε, Z / Z  (guess: one b each)\l"];
+  "s" -> "p2" [label="ε, Z / Z  (guess: two b each)\l"];
+  "p1" -> "p1" [label="a, Y / XY\l"];
+  "p2" -> "p2" [label="a, Y / XXY\l"];
+  "p1" -> "r" [label="b, X / ε\l"];
+  "p2" -> "r" [label="b, X / ε\l"];
+  "r" -> "r" [label="b, X / ε\l"];
+  "p1" -> "f" [label="ε, Z / Z\l"];
+  "p2" -> "f" [label="ε, Z / Z\l"];
+  "r" -> "f" [label="ε, Z / Z\l"];
+}
